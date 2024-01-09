@@ -1,0 +1,45 @@
+.nav {
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+    background-color: #f9f9fa;
+    padding: 20px 40px;
+    box-sizing: border-box; /* css에게 box 사이즈를 변경하지 말라고 알려준 것 */
+    /* css 작동 방식 : 200px짜리 content box를 만들고 padding 50을 줬으면 그 box는 250px짜리가 됨
+    그래서 마지막 아이콘이 잘렸던 것... 그것을 방지하기 위해서 box-sizing: border-box; 를 줌
+    이게 무슨 의미냐.. "내가 padding을 줘도 신경쓰지마. 내 box 사이즈를 늘리지 마" 라고 한 것
+    --> 그러면 padding: 50px, content 출력되는 부분은 150px이 됨 
+    상하좌우 padding 모두 다 이렇게 작동함. */
+    border-top: 1px solid rgba(121, 121, 121, 0.3);
+}
+
+.nav__list {
+    display: flex;
+    justify-content: space-between;
+}
+
+.nav__link {
+    position: relative;
+    color: #2e363e;
+}
+
+.nav__notification {
+    position: absolute;
+    left: 13px;
+    bottom: 7px;
+}
+
+.nav__notification2 {
+    background-color: tomato;
+    width:4px;
+    height: 4px;
+    border-radius: 2px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: tomato;
+    font-size: 3px;
+    position: absolute;
+    left: 22px;
+    bottom: 19px;
+}
