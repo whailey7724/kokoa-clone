@@ -1,10 +1,13 @@
-<!DOCTYPE html>
+<!-- 대부분의 웹 서버가 디폴트로 index.html을 찾아보도록 설정되어있음
+ 영어에서 index는 첫번째 라는 의미 -->
+
+ <!DOCTYPE html>
  <html lang="en">
  <head>
     <link rel="stylesheet" href="css/styles.css">
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Find - Kokoa Clone</title>
+    <title>Chats - Kokoa Clone</title>
  </head>
  <body>
     <div class="status-bar">
@@ -27,50 +30,30 @@
     </div>
 
     <header class="screen-header">
-        <h1 class="screen-header__title">Find</h1>
+        <h1 class="screen-header__title">Chats</h1>
         <div class="screen-header__icons">
             <span><i class="fa-solid fa-magnifying-glass fa-lg"></i></span>
-            <span><a href="settings.html"><i class="fa-solid fa-gear fa-lg"></i></a></span>
-            <!-- 설정 버튼 위에 빨간점 만들기 -->
+            <span><i class="fa-regular fa-comments fa-lg"></i></span>
+            <span><i class="fa-solid fa-music fa-lg"></i></span>
+            <span><i class="fa-solid fa-gear fa-lg"></i></span>
         </div>
     </header>
 
     <main class="main-screen">
-        <div class="icon-row">
-            <div class="icon-row__icon"><i class="fa-solid fa-qrcode"></i><span>QR Code</span></div>
-            <div class="icon-row__icon"><i class="fa-regular fa-address-book"></i><span>Add by Contacts</span></div>
-            <div class="icon-row__icon"><i class="fa-solid fa-fingerprint"></i><span>Add by ID</span></div>
-            <div class="icon-row__icon"><i class="fa-regular fa-envelope"></i><span>Invite</span></div>
-        </div>
-        <div class="recommend-friends">
-            <h6 class="recommend-friends__title">Recommend Friends</h6>
-            <span>You have no recommended friends.</span>
-        </div>
-        <div class="open-chat">
-            <div class="open-chat__header">
-                <h4>Open Chat</h4>
-                <span>Go to Openchat Home <i class="fa-solid fa-chevron-right fa-xs"></i></span>
-            </div>
-            <div class="open-post">
-                <div class="open-post__column">
-                    <h5 class="open-post__title">#aespa</h5>
-                    <h6 class="open-post__hashtags">#aespa#my#friends</h6>  <!-- 대문자는 디자인적인 요소기 때문에 소문자로 적음 
-                         class="open-post__"보여지는 것 때문에 대문자가 필요하다면 html에서는 소문자로 적고 css에서 대문자로 바꿔주면 됨-->
-                    <div class="open-post__members">
-                        <img src="./photo/winterfan.png">
-                        <span class="open-post__member-count">412 members</span>
-                        <div class="divider"></div>
-                        <span class="open-post__member-status">Active</span>
-                    </div>
-                </div>
-                <div class="open-post__column">
-                    <div class="open-post__photo">
-                        <img src="./photo/aespa.jpg">
-                        <div class="open-post__heart-count"><i class="fa-solid fa-heart fa-xs"></i><span>1117</span></div>
-                    </div>
+        <div class="user-component">
+            <div class="user-component__column">
+                <img src="karina.jpg" class="user-component__avatar user-component__avatar">
+                <div class="user-component__text">
+                    <h4 class="user-component__title">지민이♡</h4>
+                    <h6 class="user-component__subtitle">뭐행</h6>
                 </div>
             </div>
+            <div class="user-component__column">
+                <span class="user-component__time">21:22</span>
+                <div class="badge user-component__notification">1</div>
+            </div>
         </div>
+        
     </main>
 
     <!-- 단축어 nav>ul>li*4>a 치면 알아서 vscode가 쳐줌 -->
@@ -84,7 +67,7 @@
             <li class="nav__btn">
                 <a class="nav__link" href="chats.html">
                     <span class="nav__notification badge">1</span>
-                    <i class="fa-regular fa-comment fa-xl"></i>
+                    <i class="fa-solid fa-comment fa-xl"></i>
                 </a>
             </li>
             <li class="nav__btn">

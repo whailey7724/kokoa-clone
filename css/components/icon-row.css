@@ -1,0 +1,18 @@
+.icon-row {
+    display: flex;
+    justify-content: space-between;
+}
+
+.icon-row__icon {
+    display: flex;
+    flex-direction: column; /* 주축 교차축 바꾸기 */
+    align-items: center;    /* 교차축 수정 - 수평이 교차축 */
+}
+
+.icon-row__icon i {
+    font-size: 30px;
+}
+
+.icon-row__icon span {
+    margin-top: 17px;
+}

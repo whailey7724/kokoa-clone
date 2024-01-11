@@ -1,7 +1,4 @@
-<!-- 대부분의 웹 서버가 디폴트로 index.html을 찾아보도록 설정되어있음
- 영어에서 index는 첫번째 라는 의미 -->
-
- <!DOCTYPE html>
+<!DOCTYPE html>
  <html lang="en">
  <head>
     <link rel="stylesheet" href="css/styles.css">
@@ -11,8 +8,6 @@
  </head>
  <body>
     <div class="status-bar">
-        <!-- 클래스 이름을 이렇게 길게 적는 이유는 그냥 column이라고 하면 어떤 column을 가리키는지 알기 어려움
-            근데 이렇게 세세하게 설정하면 상태바에 있는 column을 가리키는 것을 쉽게 알 수 있다.(아래) -->
         <div class="status-bar__column">
             <span>No Service</span>
             <i class="fa-solid fa-wifi"></i>
@@ -24,8 +19,6 @@
             <span>110%</span>
             <i class="fa-solid fa-battery-full fa-lg"></i>
             <i class="fa-solid fa-bolt"></i>
-            <!-- svg - 픽셀이 아닌 path로 되어있는 이미지 .. 수학이고 좌표일 뿐인 .. -->
-            <!-- Lightning Icon -->
         </div>
     </div>
 
@@ -34,7 +27,7 @@
         <div class="screen-header__icons">
             <span><i class="fa-solid fa-magnifying-glass fa-lg"></i></span>
             <span><i class="fa-solid fa-music fa-lg"></i></span>
-            <span><i class="fa-solid fa-gear fa-lg"></i></span>
+            <span><a href="settings.html"><i class="fa-solid fa-gear fa-lg"></i></a></span>
         </div>
     </header>
 
@@ -45,7 +38,7 @@
     <main class="friends-screen">
         <div class="user-component">
             <div class="user-component__column">
-                <img src="winter2.png" class="user-component__avatar user-component__avatar--xl">
+                <img src="./photo/winter2.png" class="user-component__avatar user-component__avatar--xl">
                 <div class="user-component__text">
                     <h4 class="user-component__title">민정이♡</h4>
                     <h6 class="user-component__subtitle">윈터에요</h6>
@@ -61,7 +54,7 @@
             </div>
             <div class="user-component user-component__friend">
                 <div class="user-component__column">
-                    <img src="karina.jpg" class="user-component__avatar user-component__avatar--sm">
+                    <img src="./photo/karina.jpg" class="user-component__avatar user-component__avatar--sm">
                     <div class="user-component__text">
                         <h4 class="user-component__title user-component__title--not-bold">지민이♡</h4>
                         <h6 class="user-component__subtitle">지밍밍</h6>
@@ -70,7 +63,7 @@
             </div>
             <div class="user-component user-component__friend">
                 <div class="user-component__column">
-                    <img src="person2.jpg" class="user-component__avatar user-component__avatar--sm">
+                    <img src="./photo/person2.jpg" class="user-component__avatar user-component__avatar--sm">
                     <div class="user-component__text">
                         <h4 class="user-component__title user-component__title--not-bold">Channel</h4>
                     </div>
