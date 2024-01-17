@@ -62,4 +62,12 @@ git은 어떤 commint이라도 받을 수 있게 해줌
 -branch라고 불리는 이유는 나무같이 생겨서임. 같은 베이스에서 시작하지만, 어떤 한 부분에서부터 완전히 달라짐
 -그렇다고 branch들이 항상 나눠져 있는 것은 아님. 원하면 branch를 만들었다가 다시 합칠 수 있음.
     >> branch를 만들었다가 합치는 것을 merge라고 부름
-    
+-여기서 url은 유저이름.github.io/저장소이름/
+
+# publish한 github 페이지에서 수정하고 싶은 부분이 생긴다면?
+1. master branch로 가야 함 __master에 있을 때, 바꾸고 싶은 건 뭐든지 바꿀 수 있음
+    >> 모든 수정은 master branch에서!!
+2. master branch에서 commit하고, 웹사이트를 업데이트하고 싶은 거니까 github-pages branch도 업데이트 해야 함
+    >> 기억할 점 : 코드의 업데이트는 master에서 하되 그것뿐만이 아니라 'gh-pages'에도 업데이트해줘야 함!!
+3. 'gh-pages' branch로 가서 branch-update from master 버튼 클릭 -> push
+    >> master에 있는 모든 commit들을 가져오겠다는 뜻
