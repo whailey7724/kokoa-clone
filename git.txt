@@ -1,0 +1,65 @@
+# Git   >> 파일들을 주시하면서 관리해주는 도구
+- 어떤 파일이든지 원하는 파일의 변경된 내용 확인 가능
+- 주로 programming에서 사용되는 도구. text파일의 변경내용을 확인할 수 있도록 도와줌 
+    --> text 파일에서만 사용할 수 있는 것은 아님. 어떤 파일이든지 가능. 
+    - 파일을 binary format으로 인식하기 때문에. 01010101101011
+- git은 파일을 계속 추적(Tracking)하는 것 ****
+- version control을 위한 가장 기본적인 시스템
+
+-무료 -> git-scm.com에서 다운 가능
+git만 다운로드하면 사용할 수 있음.
+
+# Github    >> git의 변경내역을 볼 수 있는 사이트
+- 변경내역을 업로드하는 곳
+
+--> git은 계속 추적하면서 변경내역을 관리해주고 github에는 그 변경내역을 업로드하는 것.
+        version control system                          파일 내역과 파일들을 올려주는 공간
+
+- repository는 폴더처럼 생김.. 컴퓨터의 디렉토리를 복사한 것과 같음. 
+- 변경된 코드를 보여줌 _ 추가된 것은 +와 초록줄, 삭제된 것은 -와 빨간줄
+    ---> 거대 프로젝트에서 git과 github를 사용했을 때의 장점. 변경점을 정말 쉽게 확인할 수 있음
+-코드를 변경하게 되면 commit을 하게 됨. 
+    -> 코드의 새로운 버전 / commint = 내가 저장하고 싶어하는 시점
+    ----> 시점을 되돌릴 수도 있다는 뜻!! 실수를 했다면, 실수를 하기 전의 시점으로 돌아갈 수 있다.
+
+# Github에 Repository 만들기
+- 컴퓨터에 폴더를 만든 다음 그 폴더를 github에 올리는 방식
+- 처음부터 github 내에 Repository를 만들어주는 방식         >> 추천
+이렇게 두 가지가 있음
+
+- Repository 이름 = 폴더의 이름 = github의 repository 이름
+- repository에 파일을 만든다고 내 컴퓨터에 생기는 것은 아니고, 이걸 위해서는 github desktop이라는 도구를 다운로드해야함.
+    - github desktop은 초보자들이 github와 작업을 하기 위한 도구
+-> github desktop을 통해 경로 설정 -> clone 하면 github에 생성한 repository를 컴퓨터에 가져올 수 있다.
+    --> 이렇게 하면 컴퓨터와 github 사이트에 있는 폴더가 서로 연결된 상태가 됨
+
+- markdown은 서식이 있는 문서를 작성하는 것. 확장자명 md
+- readme 파일은 모든 git repository가 가지고있어야 하는 파일
+
+- github에 연결한 폴더에 새 파일을 만들어서 무언가 변경점이 나타나면 github desktop이 감지함.
+그 후에 publish(게시)를 해야 함. -> 원하는 파일을 선택해주고, commit명을 적음 _설명은 필요없지만 타이틀은 있어야됨!
+    _commit의 타이틀에는 내가 무엇을 했는지 적기! >> 이건 publish한 것이 아니라 github에는 딱히 달라진 게 없음
+-> publish branch 클릭하기
+
+- commit할 때마다 push도 같이 해줘야 함!! _ 이렇게 안하면 변경점을 컴퓨터만 하고 github는 모름
+
+# .gitignore
+무시하고 싶은 파일 이름을 기록하는 파일.
+여기에 파일명을 적으면 git이 알아서 그 파일을 무시함.
+    --> commit할때마다 올리기 싫은 파일을 체크해제하고 올리기 귀찮으니까.. 자동으로 빠지게끔
+어떤 파일 이름이라도 적을 수 있음. 스크린샷까지도..
+
+# branch
+git에서 branch는 코드들의 평행세계라고 할 수 있음
+** 구글에 git branches 검색
+>> 가운데 있는 일직선(branch)이 master branch. 
+git은 어떤 commint이라도 받을 수 있게 해줌
+그림에 있는 동그라미가 다 commit
+    >> 어떤 commit이라도 거기서부터 다른 프로젝트를 시작할 수 있음. __master branch와는 또 다른 프로젝트를!
+-- 대부분 사람들은 master branch에는 stable(잘 작동하는 것으로 어느 정도 검증이 된) code를 올림
+그리고 실험하고 싶은 거나 새로운 기능을 추가할 때 새로운 branch를 만듦
+
+-branch라고 불리는 이유는 나무같이 생겨서임. 같은 베이스에서 시작하지만, 어떤 한 부분에서부터 완전히 달라짐
+-그렇다고 branch들이 항상 나눠져 있는 것은 아님. 원하면 branch를 만들었다가 다시 합칠 수 있음.
+    >> branch를 만들었다가 합치는 것을 merge라고 부름
+    
